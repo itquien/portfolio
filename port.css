@@ -7,7 +7,7 @@
    text-decoration: none;
    border: none;
    outline: none;
-   font-family: inherit
+   font-family: inherit;
 }
 
 :root {
@@ -30,26 +30,27 @@ body {
    background: var(--bg-color);
    font-weight: 200;
    overflow: hidden;
+   font-size: 0.7rem; /* make font smaller */
 }
 
 .wrapper {
    position: relative;
-   width: 66rem;
-   height: 45rem;
+   width: 90vw;
+   height: 60vh;
    padding: 2rem;
-   perspective: 250rem;
-   animation: show-animate  2s forwards;
+   perspective: 1000px;
+   animation: show-animate 2s forwards;
 }
 
 @keyframes show-animate {
-    0%,30% {
-        opacity: 0;
-        transform: rotate(-20deg)
-    }
-    100% {
-        opacity: 1;
-        transform: rotate(0deg)
-    }
+   0%, 30% {
+      opacity: 0;
+      transform: rotate(-20deg);
+   }
+   100% {
+      opacity: 1;
+      transform: rotate(0deg);
+   }
 }
 
 .cover {
@@ -60,8 +61,8 @@ body {
    height: 100%;
    background: var(--cover-color);
    box-shadow: var(--box-shadow);
-   border-top-left-radius: .6rem;
-   border-bottom-left-radius: .6rem;
+   border-top-left-radius: 0.6rem;
+   border-bottom-left-radius: 0.6rem;
    transform-origin: right;
 }
 
@@ -70,8 +71,8 @@ body {
 }
 
 .cover.cover-right {
-    z-index: 100;
-    transition: transform 1s cubic-bezier(.645, .045, .355, 1);
+   z-index: 100;
+   transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .cover.cover-right.turn {
@@ -91,10 +92,9 @@ body {
    width: 50%;
    height: 100%;
    background: var(--pages-color);
-   box-shadow: 0 0 .6rem rgba(0, 0, 0, .1);
+   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
    display: flex;
    padding: 2rem;
-   
 }
 
 .profile-page {
@@ -102,12 +102,12 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
- }
+}
 
 .profile-page img {
    max-width: 85px;
    border-radius: 50%;
-   margin-bottom: .8rem;
+   margin-bottom: 0.8rem;
 }
 
 .profile-page h1 {
@@ -121,28 +121,28 @@ body {
 }
 
 .profile-page .social-media {
-   margin: .6rem 0 .8rem;
+   margin: 0.6rem 0 0.8rem;
 }
 
 .profile-page .social-media a {
    display: inline-flex;
-   justify-content:center;
+   justify-content: center;
    align-items: center;
-   width: 2.5rem;
-   height: 2.5rem;
+   width: 2rem;          /* smaller icon container */
+   height: 2rem;
    background: transparent;
    border: var(--border);
    border-radius: 50%;
-   font-size: 1rem;
+   font-size: 0.8rem;    /* smaller icon size */
    color: var(--main-color);
-   margin: 0 .2rem;
+   margin: 0 0.2rem;
 }
 
 .profile-page .social-media a:hover {
    background: var(--main-color);
    color: var(--white-color);
-   margin: 0 .2rem;
-   transition: .5s;
+   margin: 0 0.2rem;
+   transition: 0.5s;
 }
 
 .profile-page p {
@@ -157,16 +157,16 @@ body {
    display: inline-flex;
    justify-content: center;
    align-items: center;
-   width: 8rem;  /* Adjusted width for smaller buttons */
-   height: 2.8rem; /* Adjusted height for smaller buttons */
+   width: 8rem;
+   height: 2.8rem;
    background: var(--main-color);
    border: var(--border);
-   border-radius: .3rem;
-   font-size: .95rem;
+   border-radius: 0.3rem;
+   font-size: 0.95rem;
    color: var(--white-color);
    font-weight: 500;
    margin: 0 1em;
-   transition: .5s;
+   transition: 0.5s;
    border-radius: 8px;
    background: #fff;
    color: var(--main-color);
@@ -195,7 +195,7 @@ body {
    right: 0;
    transform-style: preserve-3d;
    transform-origin: left;
-   transition: transform 1s cubic-bezier(.645, .045, .355, 1);
+   transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .book-page.page-right.turn {
@@ -251,7 +251,8 @@ body {
 }
 
 .workeduc-content .year i {
-   margin-right: .4rem;
+   margin-right: 0.4rem;
+   font-size: 0.8rem; /* smaller icon */
 }
 
 .number-page {
@@ -263,7 +264,7 @@ body {
 
 .nextprev-btn {
    position: absolute;
-   bottom: .9rem;
+   bottom: 0.9rem;
    right: 1.5rem;
    width: 2rem;
    height: 2rem;
@@ -273,7 +274,7 @@ body {
    display: inline-flex;
    justify-content: center;
    align-items: center;
-   transition: .5s;
+   transition: 0.5s;
    background: #fff;
    border-radius: 50%;
    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -296,10 +297,10 @@ body {
 .services-box .services-content {
    flex: 1 1 10rem;
    border: var(--border);
-   border-radius: .5rem;
-   padding: .8rem .5rem 1.1rem;
+   border-radius: 0.5rem;
+   padding: 0.8rem 0.5rem 1.1rem;
    text-align: center;
-   transition: .3s ease;
+   transition: 0.3s ease;
 }
 
 .services-box .services-content:hover {
@@ -307,7 +308,7 @@ body {
 }
 
 .services-content i {
-   font-size: 2.5rem;
+   font-size: 1.5rem; /* reduced from 2.5rem */
    color: var(--main-color);
 }
 
@@ -316,11 +317,11 @@ body {
 }
 
 .services-content p {
-   margin: .2rem 0 .8rem;
+   margin: 0.2rem 0 0.8rem;
 }
 
 .services-content .btn {
-   width: 7.5rem;  /* Adjusted button size */
+   width: 7.5rem;
    height: 2.5rem;
 }
 
@@ -337,13 +338,13 @@ body {
 .skills-content h3 {
    font-size: 1.3rem;
    line-height: 1;
-   margin-bottom: .6rem;
+   margin-bottom: 0.6rem;
 }
 
 .skills-content .content {
    display: flex;
    flex-wrap: wrap;
-   gap: .8rem;
+   gap: 0.8rem;
 }
 
 .skills-content .content span {
@@ -354,9 +355,9 @@ body {
    width: 6rem;
    height: 5rem;
    border: var(--border);
-   border-radius: .3rem;
+   border-radius: 0.3rem;
    font-weight: 600;
-   transition: .3s ease;
+   transition: 0.3s ease;
 }
 
 .skills-content .content span:hover {
@@ -364,7 +365,7 @@ body {
 }
 
 .skills-content .content span i {
-   font-size: 3rem;
+   font-size: 2rem; /* reduced from 3rem */
    color: var(--main-color);
 }
 
@@ -372,7 +373,7 @@ body {
    width: 100%;
    height: 15rem;
    border: var(--border);
-   border-radius: .5rem;
+   border-radius: 0.5rem;
    overflow: hidden;
 }
 
@@ -380,7 +381,7 @@ body {
    width: 100%;
    height: 100%;
    object-fit: cover;
-   transition: .5s ease;
+   transition: 0.5s ease;
 }
 
 .portfolio-box .img-box:hover img {
@@ -409,7 +410,8 @@ body {
 }
 
 .portfolio-box .info-box .info-title a i {
-   margin-left: .3rem;
+   margin-left: 0.3rem;
+   font-size: 0.8rem; /* smaller icon */
 }
 
 .portfolio-box .info-box p:nth-of-type(1) {
@@ -431,8 +433,8 @@ body {
    width: 100%;
    background: transparent;
    border: var(--border);
-   border-radius: .3rem;
-   padding: .8rem;
+   border-radius: 0.3rem;
+   padding: 0.8rem;
    font-size: 1rem;
    color: var(--text-color);
    margin-bottom: 1.5rem;
@@ -459,17 +461,17 @@ body {
    height: 2rem;
    background: transparent;
    border: var(--border);
-   border-radius: .3rem;
+   border-radius: 0.3rem;
    font-size: 1.1rem;
    color: var(--main-color);
    display: inline-flex;
    justify-content: center;
    align-items: center;
-   transition: .5s;
+   transition: 0.5s;
    background: #fff;
    border-radius: 50%;
    padding: 0.5rem;
-   box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
 }
 
 .back-profile:hover {
@@ -481,11 +483,11 @@ body {
    position: absolute;
    top: 0;
    left: 50%;
-   transform: translateX(-50%) scale(.5);
+   transform: translateX(-50%) scale(0.5);
    font-size: 1rem;
    color: var(--main-color);
    opacity: 0;
-   transition: .5s;
+   transition: 0.5s;
 }
 
 .back-profile:hover p {
@@ -493,14 +495,14 @@ body {
    transform: translateX(-50%) scale(1);
    top: -1.8rem;
 }
+
 .contact-box a {
-   color: var(--main-color); /* Or use a custom color like #000 or #555 */
+   color: var(--main-color);
    font-weight: 500;
    text-decoration: none;
    transition: color 0.3s ease;
- }
- 
- .contact-box a:hover {
-   color: #888; /* Optional: a soft hover effect */
- }
- 
+}
+
+.contact-box a:hover {
+   color: #888;
+}
